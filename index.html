@@ -2,28 +2,28 @@
 <html>
   <head>
     <style>
-      button{width: 30%;}
+      button{width: 30%;height:20vh;}
     </style>
   </head>
   <body>
     <h1>Tic-Tac-Toe</h1>
     <p id="winner"></p>
     <section class="board">
-      <button id="1"></button>
-      <button id="2"></button>
-      <button id="3"></button>
-      <button id="4"></button>
-      <button id="5"></button>
-      <button id="6"></button>
-      <button id="7"></button>
-      <button id="8"></button>
-      <button id="9"></button>
+      <button id="1">&nbsp;</button>
+      <button id="2">&nbsp;</button>
+      <button id="3">&nbsp;</button>
+      <button id="4">&nbsp;</button>
+      <button id="5">&nbsp;</button>
+      <button id="6">&nbsp;</button>
+      <button id="7">&nbsp;</button>
+      <button id="8">&nbsp;</button>
+      <button id="9">&nbsp;</button>
     </section>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
       jQuery(function($){
-        var socket = io.connect('http://localhost'),
+        var socket = io.connect('http://localhost:8008'),
             $board = $(".board"),
             ticTacToe = {
               whoseTurn: "X",
@@ -91,7 +91,6 @@
             ticTacToe.changeWhoseTurn();
           }
         });
-
       });
     </script>
   </body>
